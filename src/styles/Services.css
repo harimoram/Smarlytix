@@ -1,0 +1,147 @@
+:root {
+  --theme-color: #0A2342;
+  --accent-color: #2ECC71;
+  --light-color: #ffffff;
+  --text-color: #333333;
+}
+
+.services {
+  padding: 20px 40px;
+  background-color: var(--light-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--theme-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.services h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services p {
+  font-size: 1.1rem;
+  max-width: 80%;
+  margin-bottom: 40px;
+  color: var(--theme-color);
+}
+
+/* Grid layout */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* Card */
+.service-card {
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  padding: 25px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border: 2px solid var(--theme-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/*
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+*/
+/* Icon badge on top */
+.service-icon {
+  background-color: var(--theme-color);
+  color: var(--accent-color);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.service-card h3 {
+  margin-top: 30px; /* Space below icon */
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: var(--theme-color);
+}
+
+/* Description */
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+/* Button */
+.contact-btn-services {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--theme-color);
+  background-color: transparent;
+  color: var(--theme-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn-services:hover {
+  background: var(--theme-color);
+  color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
+    margin-top: 25px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .contact-btn-services {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+  }
+}

@@ -1,0 +1,223 @@
+:root {
+  --theme-color: #0A2342;
+  --accent-color: #2ECC71;
+  --light-color: #ffffff;
+}
+
+/* About Section */
+
+.about {
+  padding: 0px 40px 40px 40px;
+  background-color: var(--accent-color);
+  color: var(--theme-color);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/*Grid Start*/
+.step {
+  position: relative;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  color: var(--theme-color);
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Grid background for step section */
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind content */
+  background-image: 
+    linear-gradient(to right, rgba(46, 204, 113, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46, 204, 113, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px; /* size of each square in the mesh */
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: 
+    linear-gradient(to right, rgba(46, 204, 113, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46, 204, 113, 0.2) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: moveGrid 15s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 60px 60px, 60px 60px; }
+}
+
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.about h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--theme-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Content */
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 0px;
+  text-align: left;
+  color: var(--theme-color);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+.about-text .highlight {
+  font-weight: bold;           /* bold text */
+}
+
+.about-text .highlight-large {
+  font-size: 1.5rem;           /* larger text */
+  font-weight: bold;           /* optional */
+}
+
+
+/* Approach */
+.approach {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Approach Cards */
+.step {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--light-color);
+  padding: 20px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+  border: 2px solid transparent;
+}
+
+.step:nth-child(1) { animation-delay: 0.3s; }
+.step:nth-child(2) { animation-delay: 0.5s; }
+.step:nth-child(3) { animation-delay: 0.7s; }
+
+/* Hover effect for steps */
+.step:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border: 2px solid var(--theme-color);
+}
+
+/* Step icon */
+.step-icon {
+  margin: 0 auto 0;
+  transition: transform 0.3s ease;
+}
+
+.step:hover .step-icon {
+  transform: scale(1.2);
+}
+
+/* Step content */
+.step h3 {
+  font-size: 1.5rem;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .about h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .step h3 {
+    font-size: 1.3rem;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    padding: 20px 20px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .approach {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step {
+    padding: 25px 15px;
+  }
+}

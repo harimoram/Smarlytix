@@ -1,0 +1,91 @@
+.process-section {
+  padding: 40px 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.process-intro {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.process-intro h2 {
+  font-size: 2.5rem;
+  color: #0A2342;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+.process-intro p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.process-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 2px solid #0A2342;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon-wrapper {
+  background: #2ECC71;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-card h3 {
+  font-size: 1.6rem;
+  color: #0A2342;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.process-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .process-intro h2 {
+    font-size: 2rem;
+  }
+
+  .process-intro p {
+    font-size: 1rem;
+  }
+
+  .process-card {
+    padding: 25px 15px;
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+}
