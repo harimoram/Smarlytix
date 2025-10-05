@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Smarlytix/static/css/main.94e137e7.css",
+    "main.js": "/Smarlytix/static/js/main.2423eb86.js",
+    "static/js/453.a9e9eca5.chunk.js": "/Smarlytix/static/js/453.a9e9eca5.chunk.js",
+    "static/media/hero-image.jpg": "/Smarlytix/static/media/hero-image.0cd2a2d02e27f04c8d56.jpg",
+    "static/media/retailImg.png": "/Smarlytix/static/media/retailImg.5dc4e6d633a923fab207.png",
+    "static/media/financeImg.png": "/Smarlytix/static/media/financeImg.e5dd80ed376003ed3c98.png",
+    "index.html": "/Smarlytix/index.html",
+    "main.94e137e7.css.map": "/Smarlytix/static/css/main.94e137e7.css.map",
+    "main.2423eb86.js.map": "/Smarlytix/static/js/main.2423eb86.js.map",
+    "453.a9e9eca5.chunk.js.map": "/Smarlytix/static/js/453.a9e9eca5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94e137e7.css",
+    "static/js/main.2423eb86.js"
+  ]
+}
